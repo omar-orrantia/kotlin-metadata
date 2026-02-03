@@ -1,8 +1,12 @@
-plugins { `kotlin-dsl` }
+plugins {
+    `kotlin-dsl`
+    kotlin("jvm") version "1.9.20"
+}
 
-repositories { jcenter() }
+repositories {
+    gradlePluginPortal()
+}
 
 dependencies {
-    compileOnly(kotlin("gradle-plugin"))
-    compile("com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0")
+    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.20")
 }
