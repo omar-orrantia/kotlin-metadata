@@ -1,6 +1,7 @@
-**/build
-**/out
-local.properties
+.prism.log
 .gradle
 .idea
-*.iml
+.kotlin
+build/
+codegen.log
+kls_database.db

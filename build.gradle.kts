@@ -1,7 +1,49 @@
-plugins { kotlin("jvm") version "1.2.40" apply false }
+plugins {
+    id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
+    id("org.jetbrains.dokka") version "2.0.0"
+}
+
+repositories {
+    mavenCentral()
+}
+
+allprojects {
+    group = "com.strezless_musick_nexus_metadata.api"
+    version = "0.0.1" // x-release-please-version
+}
 
 subprojects {
+    // These are populated with dependencies by `buildSrc` scripts.
+    tasks.register("format") {
+        group = "Verification"
+        description = "Formats all source files."
+    }
+    tasks.register("lint") {
+        group = "Verification"
+        description = "Verifies all source files are formatted."
+    }
+    apply(plugin = "org.jetbrains.dokka")
+}
+
+subprojects {
+    apply(plugin = "org.jetbrains.dokka")
+}
+
+// Avoid race conditions between `dokkaHtmlCollector` and `dokkaJavadocJar` tasks
+tasks.named("dokkaHtmlCollector").configure {
+    subprojects.flatMap { it.tasks }
+        .filter { it.project.name != "strezless-musick-nexus-metadata-kotlin" && it.name == "dokkaJavadocJar" }
+        .forEach { mustRunAfter(it) }
+}
+
+nexusPublishing {
     repositories {
-        jcenter()
+        sonatype {
+            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
+            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
+
+            username.set(System.getenv("SONATYPE_USERNAME"))
+            password.set(System.getenv("SONATYPE_PASSWORD"))
+        }
     }
 }
