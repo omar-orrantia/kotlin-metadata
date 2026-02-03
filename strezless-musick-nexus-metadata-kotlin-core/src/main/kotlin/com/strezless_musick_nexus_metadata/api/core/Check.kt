@@ -67,7 +67,7 @@ This can happen if you are either:
 
 Double-check that you are depending on compatible Jackson versions.
 
-See https://www.github.com/omar-orrantia/music-metadata#jackson for more information.
+See https://www.github.com/omar-orrantia/kotlin-metadata#jackson for more information.
         """
             .trimIndent()
     }
