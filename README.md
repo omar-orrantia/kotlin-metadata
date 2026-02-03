@@ -2,8 +2,8 @@
 
 <!-- x-release-please-start-version -->
 
-[![Maven Central](https://img.shields.io/maven-central/v/com.strezless_musick_nexus_metadata.api/strezless-musick-nexus-metadata-kotlin)](https://central.sonatype.com/artifact/com.strezless_musick_nexus_metadata.api/strezless-musick-nexus-metadata-kotlin/0.0.1)
-[![javadoc](https://javadoc.io/badge2/com.strezless_musick_nexus_metadata.api/strezless-musick-nexus-metadata-kotlin/0.0.1/javadoc.svg)](https://javadoc.io/doc/com.strezless_musick_nexus_metadata.api/strezless-musick-nexus-metadata-kotlin/0.0.1)
+[![Maven Central](https://img.shields.io/maven-central/v/com.strezless_musick_nexus_metadata.api/strezless-musick-nexus-metadata-kotlin)](https://central.sonatype.com/artifact/com.strezless_musick_nexus_metadata.api/strezless-musick-nexus-metadata-kotlin/0.0.2)
+[![javadoc](https://javadoc.io/badge2/com.strezless_musick_nexus_metadata.api/strezless-musick-nexus-metadata-kotlin/0.0.2/javadoc.svg)](https://javadoc.io/doc/com.strezless_musick_nexus_metadata.api/strezless-musick-nexus-metadata-kotlin/0.0.2)
 
 <!-- x-release-please-end -->
 
@@ -13,7 +13,7 @@ It is generated with [Stainless](https://www.stainless.com/).
 
 <!-- x-release-please-start-version -->
 
-KDocs are available on [javadoc.io](https://javadoc.io/doc/com.strezless_musick_nexus_metadata.api/strezless-musick-nexus-metadata-kotlin/0.0.1).
+KDocs are available on [javadoc.io](https://javadoc.io/doc/com.strezless_musick_nexus_metadata.api/strezless-musick-nexus-metadata-kotlin/0.0.2).
 
 <!-- x-release-please-end -->
 
@@ -24,7 +24,7 @@ KDocs are available on [javadoc.io](https://javadoc.io/doc/com.strezless_musick_
 ### Gradle
 
 ```kotlin
-implementation("com.strezless_musick_nexus_metadata.api:strezless-musick-nexus-metadata-kotlin:0.0.1")
+implementation("com.strezless_musick_nexus_metadata.api:strezless-musick-nexus-metadata-kotlin:0.0.2")
 ```
 
 ### Maven
@@ -33,7 +33,7 @@ implementation("com.strezless_musick_nexus_metadata.api:strezless-musick-nexus-m
 <dependency>
   <groupId>com.strezless_musick_nexus_metadata.api</groupId>
   <artifactId>strezless-musick-nexus-metadata-kotlin</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
 </dependency>
 ```
 
